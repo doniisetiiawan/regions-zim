@@ -3,7 +3,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ExpandableCard } from "../expandableCard.1";
+import { ExpandableCard } from "../expandableCard.2";
 import "../general.css";
 
 export class ResultsDataTable extends React.PureComponent<{
@@ -25,12 +25,10 @@ export class ResultsDataTable extends React.PureComponent<{
       return (
         <div className="bordered">
           {this.props.results.map(x => (
-            <ExpandableCard
-              key={x.id}
-              name={x.name}
-              cities={x.cities}
-              population={x.pop}
-            />
+            <ExpandableCard key={x.id} title={x.name}>
+              <div>CITIES:{x.cities}</div>
+              <div>POPULATION:{x.pop}</div>
+            </ExpandableCard>
           ))}
         </div>
       );
