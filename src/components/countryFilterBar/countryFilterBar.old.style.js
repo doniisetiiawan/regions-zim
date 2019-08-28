@@ -2,7 +2,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import "./general.css";
+import "../general.css";
 
 export class CountryFilterBar extends React.PureComponent<{
   list: Array<{ code: string, name: string }>,

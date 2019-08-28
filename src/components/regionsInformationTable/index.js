@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { CountryFilterBar } from "../countryFilterBar.old.style";
+import { CountryFilterBar } from "../countryFilterBar/countryFilterBar.old.style";
 import { ResultsDataTable } from "../resultsDataTable.1";
 
 export class RegionsInformationTable extends React.PureComponent<
