@@ -2,8 +2,8 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
+import App from "./App.3";
 
 const root = document.getElementById("root");
 if (root) {
