@@ -3,7 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import App from "./App.counter";
+import App from "./App.regions";
 
 const root = document.getElementById("root");
 if (root) {
