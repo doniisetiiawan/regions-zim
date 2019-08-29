@@ -1,7 +1,13 @@
 /* @flow */
 
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import { createLogger } from "redux-logger";
 
 import { reducer } from "./counter.reducer.js";
 
-export const store = createStore(reducer);
+const logger = createLogger({ diff: true, duration: true });
+
+export const store =
+  process.env.NODE_ENV === "development"
+    ? createStore(reducer, applyMiddleware(logger))
+    : createStore(reducer);
