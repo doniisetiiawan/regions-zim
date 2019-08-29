@@ -3,7 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import App from "./App.splitting";
+import App from "./App.counter";
 
 import { log } from "./logging";
 log.error("myapp:SERVICE:LOGIN", `Attempt`, { user: "FK", pass: "who?" });
