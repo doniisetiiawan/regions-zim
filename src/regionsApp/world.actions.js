@@ -63,10 +63,24 @@ export const regionsFailure = () =>
 export const getCountries = () => async dispatch => {
   try {
     dispatch(countriesRequest());
-    const result = await axios.get(`http://localhost:8443/countries`);
+    const result = await axios.get(`http://localhost:8080/countries`);
     dispatch(countriesSuccess(result.data));
   } catch (e) {
     dispatch(countriesFailure());
+  }
+};
+
+export const getCountries2 = () => async (dispatch, getState) => {
+  if (getState().countries.length) {
+    // no need to do anything!
+  } else {
+    try {
+      dispatch(countriesRequest());
+      const result = await axios.get(`http://localhost:8080/countries`);
+      dispatch(countriesSuccess(result.data));
+    } catch (e) {
+      dispatch(countriesFailure());
+    }
   }
 };
 
