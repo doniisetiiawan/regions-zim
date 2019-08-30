@@ -8,7 +8,8 @@ import {
   getCountries,
   getCountries2,
   COUNTRIES_REQUEST,
-  COUNTRIES_SUCCESS
+  COUNTRIES_SUCCESS,
+  COUNTRIES_FAILURE
 } from "./world.actions";
 
 import { getCountriesAPI } from "./serviceApi";
@@ -37,7 +38,7 @@ describe("getCountries", () => {
 
     expect(dispatchedActions.length).toBe(2);
     expect(dispatchedActions[0].type).toBe(COUNTRIES_REQUEST);
-    expect(dispatchedActions[1].type).toBe(COUNTRIES_SUCCESS);
+    expect(dispatchedActions[1].type).toBe(COUNTRIES_FAILURE);
     // expect(dispatchedActions[1].listOfCountries).toEqual(
     //   fakeCountries.data
     // );
